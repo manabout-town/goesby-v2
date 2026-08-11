@@ -10,6 +10,7 @@ export default function FadeIn({ children, className = '' }: { children: ReactNo
     if (!el) return
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
       el.style.opacity = '1'
+      el.style.transform = 'translateY(0)'
       return
     }
     const observer = new IntersectionObserver(

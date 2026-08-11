@@ -15,7 +15,7 @@ export default function VenueCard({ venue }: { venue: Venue }) {
         />
       </div>
       <div className="mt-4">
-        <p className="text-[13px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em]">{venue.name}</p>
+        <p className="text-[11px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em]">{venue.name}</p>
         <p className="text-[12px] text-[var(--text-sub)] mt-1">{venue.nameKo}</p>
       </div>
     </Link>
