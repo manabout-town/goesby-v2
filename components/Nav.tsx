@@ -43,7 +43,7 @@ export default function Nav() {
                     key={v.slug}
                     href={`/venues/${v.slug}`}
                     onClick={() => setVenuesOpen(false)}
-                    className="block px-4 py-2 text-[11px] uppercase tracking-[0.1em] text-[var(--text-sub)] hover:text-[var(--text)] transition-colors"
+                    className="block px-4 py-2 text-[11px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em] text-[var(--text-sub)] hover:text-[var(--text)] transition-colors"
                   >
                     {v.name}
                   </Link>
@@ -83,7 +83,7 @@ export default function Nav() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden border-t border-[var(--border)] bg-[var(--ground)] px-6 py-6 space-y-4">
-          <p className="text-[11px] uppercase tracking-[0.1em] text-[var(--text-sub)]">VENUES</p>
+          <p className="text-[11px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em] text-[var(--text-sub)]">VENUES</p>
           {venues.map((v) => (
             <Link
               key={v.slug}
@@ -94,10 +94,10 @@ export default function Nav() {
               {v.name}
             </Link>
           ))}
-          <Link href="/album" onClick={() => setMenuOpen(false)} className="block text-[11px] uppercase tracking-[0.1em] text-[var(--text)] pt-2">
+          <Link href="/album" onClick={() => setMenuOpen(false)} className="block text-[11px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em] text-[var(--text)] pt-2">
             ALBUM
           </Link>
-          <a href="https://pf.kakao.com/" target="_blank" rel="noopener noreferrer" className="block text-[11px] uppercase tracking-[0.1em] text-[var(--text)]">
+          <a href="https://pf.kakao.com/" target="_blank" rel="noopener noreferrer" className="block text-[11px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em] text-[var(--text)]">
             CONTACT
           </a>
         </div>

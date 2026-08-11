@@ -39,7 +39,7 @@ export default async function VenuePage({ params }: { params: Promise<{ slug: st
 
       {/* Next venue */}
       <div className="mt-24 text-center">
-        <p className="text-[11px] uppercase tracking-[0.1em] text-[var(--text-sub)] mb-2">Next</p>
+        <p className="text-[11px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em] text-[var(--text-sub)] mb-2">Next</p>
         <Link
           href={`/venues/${next.slug}`}
           className="text-[20px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em] hover:text-[var(--text-sub)] transition-colors"

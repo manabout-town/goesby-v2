@@ -8,7 +8,7 @@ export default function Footer() {
             href="https://www.instagram.com/goseby_official/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[11px] uppercase tracking-[0.1em] text-[var(--text-sub)] hover:text-[var(--text)] transition-colors"
+            className="text-[11px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em] text-[var(--text-sub)] hover:text-[var(--text)] transition-colors"
           >
             Instagram
           </a>
@@ -16,7 +16,7 @@ export default function Footer() {
             href="https://pf.kakao.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[11px] uppercase tracking-[0.1em] text-[var(--text-sub)] hover:text-[var(--text)] transition-colors"
+            className="text-[11px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em] text-[var(--text-sub)] hover:text-[var(--text)] transition-colors"
           >
             KakaoTalk
           </a>

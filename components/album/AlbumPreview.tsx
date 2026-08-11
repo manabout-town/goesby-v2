@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { layoutPhotos } from '@/lib/album-layout'
 import PageSpread from './PageSpread'
 
@@ -14,6 +14,13 @@ export default function AlbumPreview({ photos, albumType, onAlbumTypeChange }: P
   const [currentPage, setCurrentPage] = useState(0)
 
   const pages = useMemo(() => layoutPhotos(photos, albumType), [photos, albumType])
+
+  useEffect(() => {
+    const maxSpread = Math.ceil(pages.length / 2) - 1
+    if (currentPage > maxSpread && maxSpread >= 0) {
+      setCurrentPage(maxSpread)
+    }
+  }, [pages.length, currentPage])
 
   const spreadCount = Math.ceil(pages.length / 2)
   const leftPage = pages[currentPage * 2]

@@ -31,7 +31,7 @@ export default function CodeForm() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-sm mx-auto">
-      <label className="block text-[11px] uppercase tracking-[0.1em] text-[var(--text-sub)] mb-3">
+      <label className="block text-[11px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em] text-[var(--text-sub)] mb-3">
         접근 코드
       </label>
       <input
@@ -46,7 +46,7 @@ export default function CodeForm() {
       <button
         type="submit"
         disabled={loading}
-        className="mt-4 w-full bg-[var(--text)] text-[var(--ground)] py-3 text-[11px] uppercase tracking-[0.1em] hover:opacity-80 transition-opacity disabled:opacity-50"
+        className="mt-4 w-full bg-[var(--text)] text-[var(--ground)] py-3 text-[11px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em] hover:opacity-80 transition-opacity disabled:opacity-50"
       >
         {loading ? '확인 중...' : '확인'}
       </button>
