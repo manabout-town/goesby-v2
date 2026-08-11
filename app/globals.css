@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  --ground: #FAFAFA;
+  --text: #1A1A1A;
+  --text-sub: #717171;
+  --border: #E8E8E8;
+}
+
+* {
+  border-radius: 0;
+}
+
+body {
+  background: var(--ground);
+  color: var(--text);
+  font-family: var(--font-inter), 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
