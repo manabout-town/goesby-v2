@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Bodoni_Moda, Inter } from 'next/font/google'
+import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
 import './globals.css'
 
 const bodoni = Bodoni_Moda({
@@ -24,7 +26,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko" className={`${bodoni.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Nav />
+        <main className="pt-16">{children}</main>
+        <Footer />
+      </body>
     </html>
   )
 }
