@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const venues = [
   { slug: 'grand-moment', name: 'GRAND MOMENT' },
@@ -12,13 +12,24 @@ const venues = [
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [venuesOpen, setVenuesOpen] = useState(false)
+  const venuesRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (venuesRef.current && !venuesRef.current.contains(e.target as Node)) {
+        setVenuesOpen(false)
+      }
+    }
+    document.addEventListener('click', handleClick)
+    return () => document.removeEventListener('click', handleClick)
+  }, [])
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--ground)]">
       <nav className="mx-auto max-w-[1200px] flex items-center justify-between px-6 h-16">
         {/* Left: Venues */}
         <div className="hidden md:flex items-center gap-8">
-          <div className="relative">
+          <div className="relative" ref={venuesRef}>
             <button
               onClick={() => setVenuesOpen(!venuesOpen)}
               className="text-[11px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em] text-[var(--text)] hover:text-[var(--text-sub)] transition-colors"
