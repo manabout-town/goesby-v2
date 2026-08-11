@@ -51,7 +51,7 @@ export default function PhotoPanel({ sessionId, selected, onSelectedChange }: Pr
       <div className="flex border-b border-[var(--border)]">
         <button
           onClick={() => setTab('gallery')}
-          className={`flex-1 py-3 text-[11px] uppercase tracking-[0.1em] transition-colors ${
+          className={`flex-1 py-3 text-[11px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em] transition-colors ${
             tab === 'gallery' ? 'text-[var(--text)] border-b-2 border-[var(--text)]' : 'text-[var(--text-sub)]'
           }`}
         >
@@ -59,7 +59,7 @@ export default function PhotoPanel({ sessionId, selected, onSelectedChange }: Pr
         </button>
         <button
           onClick={() => setTab('upload')}
-          className={`flex-1 py-3 text-[11px] uppercase tracking-[0.1em] transition-colors ${
+          className={`flex-1 py-3 text-[11px] font-[family-name:var(--font-inter)] uppercase tracking-[0.1em] transition-colors ${
             tab === 'upload' ? 'text-[var(--text)] border-b-2 border-[var(--text)]' : 'text-[var(--text-sub)]'
           }`}
         >
